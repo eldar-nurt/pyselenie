@@ -15,6 +15,13 @@ Check the open calc
     [Timeout]  10min
     check_calc_dev_block
 
+Check zero button
+    [Documentation]  Проверить  кнопку "Set all to zero".
+    [Tags]     smoke  C4122294  andersen     andersen calc   newdsgn
+    [Timeout]  10min
+    ${result}=  check_zero_button
+    Should be True      ${result}
+
 Check the devs number
     [Documentation]  Проверить плюс/минус разработчика.
     [Tags]      smoke  C4122406  andersen     andersen calc   newdsgn
